@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Digital Staff - Together We Achieve More</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script async src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+</head>
+<body>
+    <header class="home-header">
+        <nav>
+            <div class="nav-container">
+                <img src="https://raw.githubusercontent.com/dtsoden/webresources/main/YourDigitalStaff-Images/Logo_Reverse_100h.png" 
+                     alt="Your Digital Staff Logo" 
+                     class="logo"
+                     loading="lazy">
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links">
+                    <a href="solutions.html">Solutions</a>
+                    <a href="benefits.html">Benefits</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="solutions.html">Solutions</a>
+                <a href="benefits.html">Benefits</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <canvas id="heroCanvas"></canvas>
+            <div class="hero-split">
+                <div class="hero-content">
+                    <h1>Together We Achieve More:<br>Human + Digital</h1>
+                    <p class="hero-subtitle">Revolutionary workforce solutions at minimum wage rates with 24/7 availability</p>
+                    <a href="contact.html" class="primary-button">Get Started</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/aihuman.webp" 
+                         alt="Human and AI Collaboration" 
+                         loading="lazy"
+                         class="collaboration-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="value-prop" class="section-light">
+            <div class="container">
+                <h2>Digital Employees at $10.80/hour</h2>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="img-container">
+                            <img src="images/24-7-availability.jpg" 
+                                 alt="24/7 Availability" 
+                                 class="value-card-img lazy-image"
+                                 loading="lazy">
+                        </div>
+                        <h3>24/7 Availability</h3>
+                        <p>Continuous operations with consistent performance</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="img-container">
+                            <img src="images/cost-effective.jpg" 
+                                 alt="Cost Effective" 
+                                 class="value-card-img lazy-image"
+                                 loading="lazy">
+                        </div>
+                        <h3>Cost Effective</h3>
+                        <p>Minimum wage rates for maximum efficiency</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="img-container">
+                            <img src="images/seamless-integration.jpg" 
+                                 alt="Seamless Integration" 
+                                 class="value-card-img lazy-image"
+                                 loading="lazy">
+                        </div>
+                        <h3>Seamless Integration</h3>
+                        <p>Works alongside your human workforce</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market-stats" class="section-dark">
+            <div class="container">
+                <h2>Market Leadership</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>$50B+</h3>
+                        <p>Total Addressable Market</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>35%</h3>
+                        <p>Annual Market Growth</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>24/7</h3>
+                        <p>Operational Capability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions-showcase" class="section-light">
+            <div class="container">
+                <h2>Our Solutions in Action</h2>
+                <div class="image-grid">
+                    <div class="image-grid-item">
+                        <img src="images/process-automation.jpg" 
+                             alt="Process Automation" 
+                             class="lazy-image"
+                             loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Process Automation</h3>
+                            <p>Streamline your operations with intelligent automation</p>
+                        </div>
+                    </div>
+                    <div class="image-grid-item">
+                        <img src="images/data-analytics.jpg" 
+                             alt="Data Analytics" 
+                             class="lazy-image"
+                             loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Data Analytics</h3>
+                            <p>Transform data into actionable insights</p>
+                        </div>
+                    </div>
+                    <div class="image-grid-item">
+                        <img src="images/customer-service.jpg" 
+                             alt="Customer Service" 
+                             class="lazy-image"
+                             loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Customer Service</h3>
+                            <p>24/7 support with AI-powered assistance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/dtsoden/webresources/main/YourDigitalStaff-Images/Logo_Reverse_100h.png" 
+                 alt="Your Digital Staff Logo" 
+                 class="footer-logo"
+                 loading="lazy">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p>&copy; <span id="copyright-year"></span> Your Digital Staff. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set copyright year
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            
+            const lazyImages = document.querySelectorAll('.lazy-image');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+
+            // Mobile Menu Toggle
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('active')) {
+                    menuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+
+            // Three.js Animation
+            let scene, camera, renderer, particles;
+            
+            function init() {
+                scene = new THREE.Scene();
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                
+                renderer = new THREE.WebGLRenderer({
+                    canvas: document.getElementById('heroCanvas'),
+                    antialias: true,
+                    alpha: true
+                });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setPixelRatio(window.devicePixelRatio);
+                
+                // Create particles
+                const particlesGeometry = new THREE.BufferGeometry();
+                const particlesCount = 1000;
+                
+                const posArray = new Float32Array(particlesCount * 3);
+                for(let i = 0; i < particlesCount * 3; i++) {
+                    posArray[i] = (Math.random() - 0.5) * 5;
+                }
+                
+                particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+                
+                const particlesMaterial = new THREE.PointsMaterial({
+                    size: 0.005,
+                    color: '#ffffff',
+                    transparent: true,
+                    opacity: 0.8,
+                    blending: THREE.AdditiveBlending
+                });
+                
+                particles = new THREE.Points(particlesGeometry, particlesMaterial);
+                scene.add(particles);
+                
+                camera.position.z = 2;
+            }
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                particles.rotation.x += 0.0003;
+                particles.rotation.y += 0.0005;
+                
+                renderer.render(scene, camera);
+            }
+            
+            function onWindowResize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+            
+            window.addEventListener('resize', onWindowResize, false);
+            
+            // Initialize Three.js scene when the script is loaded
+            if (typeof THREE !== 'undefined') {
+                init();
+                animate();
+            } else {
+                // Wait for Three.js to load
+                window.addEventListener('load', () => {
+                    if (typeof THREE !== 'undefined') {
+                        init();
+                        animate();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

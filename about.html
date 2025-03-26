@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Your Digital Staff</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/dtsoden/webresources/main/YourDigitalStaff-Images/Logo_Reverse_100h.png" 
+                         alt="Your Digital Staff Logo" 
+                         class="logo"
+                         loading="lazy">
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links">
+                    <a href="solutions.html">Solutions</a>
+                    <a href="benefits.html">Benefits</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="solutions.html">Solutions</a>
+                <a href="benefits.html">Benefits</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </nav>
+
+        <section class="page-title">
+            <div class="container">
+                <h1>About Your Digital Staff</h1>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2>Together We Achieve More: Human + Digital</h2>
+                    <p class="section-intro">"The Digital Employment Agency is the premier provider of digital employees that work alongside your human workforce at minimum wage rates, delivering 24/7 availability and consistent performance without the complexities of traditional automation."</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>$50B+</h3>
+                            <p>Total Addressable Market</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>35%</h3>
+                            <p>Annual Market Growth</p>
+                        </div>
+                    </div>
+
+                    <section class="section-light">
+                        <h2>Our Approach</h2>
+                        <div class="value-grid">
+                            <div class="value-card">
+                                <h3>Employment Model</h3>
+                                <p>A familiar framework that business leaders understand without requiring technical expertise.</p>
+                            </div>
+                            <div class="value-card">
+                                <h3>Minimum Wage Pricing</h3>
+                                <p>Transparent, predictable costs that create immediate financial benefits.</p>
+                            </div>
+                            <div class="value-card">
+                                <h3>Business-User Focused</h3>
+                                <p>Designed for business users rather than IT specialists, eliminating the need for specialized technical skills.</p>
+                            </div>
+                            <div class="value-card">
+                                <h3>Human-Digital Synergy</h3>
+                                <p>Enhancing human capabilities rather than replacing them, creating a collaborative environment.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/dtsoden/webresources/main/YourDigitalStaff-Images/Logo_Reverse_100h.png" 
+                 alt="Your Digital Staff Logo" 
+                 class="footer-logo"
+                 loading="lazy">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p>&copy; <span id="copyright-year"></span> Your Digital Staff. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set copyright year
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            
+            // Mobile Menu Toggle
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('active')) {
+                    menuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

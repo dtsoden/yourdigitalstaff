@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits - Your Digital Staff</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/dtsoden/webresources/main/YourDigitalStaff-Images/Logo_Reverse_100h.png" 
+                         alt="Your Digital Staff Logo" 
+                         class="logo"
+                         loading="lazy">
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links">
+                    <a href="solutions.html">Solutions</a>
+                    <a href="benefits.html">Benefits</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="solutions.html">Solutions</a>
+                <a href="benefits.html">Benefits</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </nav>
+
+        <section class="page-title">
+            <div class="container">
+                <h1>Benefits</h1>
+                <p>Discover the advantages of digital workforce solutions</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Cost Efficiency</h3>
+                        <ul>
+                            <li>Minimum wage rates ($10.80/hour)</li>
+                            <li>No overhead costs</li>
+                            <li>Predictable pricing</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Operational Excellence</h3>
+                        <ul>
+                            <li>24/7 Availability</li>
+                            <li>Consistent Performance</li>
+                            <li>Zero Human Error</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Business Growth</h3>
+                        <ul>
+                            <li>Scalable Operations</li>
+                            <li>Improved Efficiency</li>
+                            <li>Competitive Advantage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/dtsoden/webresources/main/YourDigitalStaff-Images/Logo_Reverse_100h.png" 
+                 alt="Your Digital Staff Logo" 
+                 class="footer-logo"
+                 loading="lazy">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p>&copy; <span id="copyright-year"></span> Your Digital Staff. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set copyright year
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            
+            // Mobile Menu Toggle
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('active')) {
+                    menuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
