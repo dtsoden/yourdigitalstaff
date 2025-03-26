@@ -1286,7 +1286,7 @@ footer {
 }
 
 .section-intro {
-    text-align: center;
+    text-align: left;
     max-width: 800px;
     margin: 0 auto 4rem;
     font-size: 1.2rem;
